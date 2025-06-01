@@ -135,8 +135,24 @@ struct CalculatorBrain {
     
     mutating func percent() {
         guard let val = Double(formatForCalc(currentOperand)) else { return }
+        
+        let oldLen = currentOperand.count
+        
         currentOperand = formattedValue(val / 100)
         display = currentOperand
+        
+        if !expression.isEmpty,
+           let last = expression.last,
+           ("0123456789,").contains(last) {
+            expression.removeLast(oldLen)
+            expression += currentOperand
+        } else if expression.isEmpty {
+            expression = currentOperand
+        }
+        if wasJustCalculated {
+            expression = currentOperand
+            wasJustCalculated = false
+        }
     }
     
     mutating func setOperation(_ op: Operation) {
