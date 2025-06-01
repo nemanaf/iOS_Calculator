@@ -35,21 +35,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="C"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OW2-fR-jtd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dm-EI-uyw">
                                                 <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7NU-35-T7B"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-eA-vz0">
                                                 <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="±"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWE-h8-gTC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r1-wl-9gp">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sil-Tf-AFo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -60,21 +72,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hV4-P6-Pm5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-7z-96m">
                                                 <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4i-Nz-RtG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5s-bq-uF8">
                                                 <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCj-br-lF5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-Jd-8js">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="×"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOs-ds-rI2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -85,21 +109,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4X4-So-rXi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-XC-YKX">
                                                 <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOz-fN-Cg7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="169-D1-LOA">
                                                 <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKX-dL-ePa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPS-3F-hA8">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="–"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ge1-sT-fw7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -110,21 +146,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxN-2s-rFK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFg-Y4-YWH">
                                                 <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swu-UQ-fPg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfM-pM-Eh6">
                                                 <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktw-lM-W6i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-vl-noh">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fby-R4-Ci7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,21 +183,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAb-vq-kAr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmi-hh-AGx">
                                                 <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INV-fN-1r1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0T-UE-JUV">
                                                 <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=","/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akx-F4-TF1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13X-2S-dsK">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wW0-Ls-nvG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -167,6 +227,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="16" id="pjl-X8-Kwe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="wJf-VZ-gOb" id="xHd-Jw-0As"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
