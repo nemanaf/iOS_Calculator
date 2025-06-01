@@ -85,6 +85,14 @@ class ViewController: UIViewController {
         case "×": setOperation(.multiply)
         case "÷": setOperation(.divide)
         case "=": calculate()
+        case "C":
+            if currentTitle.count > 1 {
+                currentTitle.removeLast()
+            } else {
+                currentTitle = "0"
+                isTypingNumber = false
+            }
+            displayLabel.text = currentTitle
         default:
             break
         }
