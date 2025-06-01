@@ -20,6 +20,19 @@ class ViewController: UIViewController {
         case multiply
         case divide
     }
+    
+    func formattedValue(_ value: Double) -> String {
+        if value.truncatingRemainder(dividingBy: 1) == 0 {
+            return String(Int(value))
+        } else {
+            let formatter = NumberFormatter()
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 10
+            formatter.numberStyle = .decimal
+            formatter.usesGroupingSeparator = false
+            return formatter.string(from: NSNumber(value: value)) ?? String(value)
+        }
+    }
 
     @IBOutlet weak var displayLabel: UILabel!
     
@@ -58,8 +71,9 @@ class ViewController: UIViewController {
                 }
                 result = firstValue / secondValue
             }
-            displayLabel.text = String(result)
-            currentTitle = String(result)
+            let formatted = formattedValue(result)
+            currentTitle = formatted
+            displayLabel.text = formatted
             currentOperation = nil
             isTypingNumber = false
         }
@@ -102,14 +116,17 @@ class ViewController: UIViewController {
         case "%":
             if let value = Double(currentTitle) {
                 let percentage = value / 100
-                currentTitle = String(percentage)
-                displayLabel.text = currentTitle
+                let formatted = formattedValue(percentage)
+                currentTitle = formatted
+                displayLabel.text = formatted
                 isTypingNumber = false
             }
         case "±":
             if let value = Double(currentTitle) {
-                currentTitle = String(-value)
-                displayLabel.text = currentTitle
+                let toggled = -value
+                let formatted = formattedValue(toggled)
+                currentTitle = formatted
+                displayLabel.text = formatted
                 isTypingNumber = true
             }
         default:
