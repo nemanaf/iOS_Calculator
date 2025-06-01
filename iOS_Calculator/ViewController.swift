@@ -29,6 +29,7 @@ class ViewController: UIViewController {
             formatter.minimumFractionDigits = 0
             formatter.maximumFractionDigits = 10
             formatter.numberStyle = .decimal
+            formatter.decimalSeparator = ","
             formatter.usesGroupingSeparator = false
             return formatter.string(from: NSNumber(value: value)) ?? String(value)
         }
@@ -47,9 +48,15 @@ class ViewController: UIViewController {
         isTypingNumber = false
     }
     
+    func stringForCalculation(_ str: String) -> String {
+        return str.replacingOccurrences(of: ",", with: ".")
+    }
+    
     func calculate() {
-        if let firstValue = Double(firstTitle),
-           let secondValue = Double(currentTitle),
+        let firstValueStr = stringForCalculation(firstTitle)
+        let secondValueStr = stringForCalculation(currentTitle)
+        if let firstValue = Double(firstValueStr),
+           let secondValue = Double(secondValueStr),
            let operation = currentOperation {
             
             var result: Double = 0
@@ -114,7 +121,8 @@ class ViewController: UIViewController {
             isTypingNumber = false
             displayLabel.text = currentTitle
         case "%":
-            if let value = Double(currentTitle) {
+            let valueStr = stringForCalculation(currentTitle)
+            if let value = Double(valueStr) {
                 let percentage = value / 100
                 let formatted = formattedValue(percentage)
                 currentTitle = formatted
@@ -122,12 +130,23 @@ class ViewController: UIViewController {
                 isTypingNumber = false
             }
         case "±":
-            if let value = Double(currentTitle) {
+            let valueStr = stringForCalculation(currentTitle)
+            if let value = Double(valueStr) {
                 let toggled = -value
                 let formatted = formattedValue(toggled)
                 currentTitle = formatted
                 displayLabel.text = formatted
                 isTypingNumber = true
+            }
+        case ",", ".":
+            if !currentTitle.contains(",") {
+                if !isTypingNumber || currentTitle == "0" {
+                    currentTitle = "0,"
+                    isTypingNumber = true
+                } else {
+                    currentTitle += ","
+                }
+                displayLabel.text = currentTitle
             }
         default:
             break
