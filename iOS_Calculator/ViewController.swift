@@ -9,50 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentTitle: String = "0"
-    var firstTitle: String = ""
-    var currentOperation: Operation? = nil
-    var isTypingNumber: Bool = false
-    var expression: String = ""
-    var wasJustCalculated: Bool = false
-    
-    enum Operation {
-        case add
-        case subtract
-        case multiply
-        case divide
-    }
-    
-    private func makeFormatter(style: NumberFormatter.Style, maxFrac: Int = 10, scientific: Bool = false) -> NumberFormatter {
-        
-        let f = NumberFormatter()
-        f.numberStyle = style
-        f.minimumFractionDigits = 0
-        f.maximumFractionDigits = maxFrac
-        f.decimalSeparator = ","
-        f.usesGroupingSeparator = false
-        if scientific {
-            f.exponentSymbol = "e"
-        }
-        return f
-    }
-    
-    func formattedValue(_ value: Double) -> String {
-        
-        let absValue = abs(value)
-        
-        if absValue >= 1e15 || (absValue != 0 && absValue < 1e-15) {
-            return makeFormatter(style: .scientific, maxFrac: 6, scientific: true).string(from: NSNumber(value: value)) ?? "\(value)"
-        }
-        if value.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(Int(value))
-        }
-        return makeFormatter(style: .decimal).string(from: NSNumber(value: value)) ?? "\(value)"
-    }
-
     @IBOutlet weak var displayLabel: UILabel!
-    
     @IBOutlet weak var expressionLabel: UILabel!
+    
+    private var brain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,163 +22,44 @@ class ViewController: UIViewController {
         
         expressionLabel.adjustsFontSizeToFitWidth = true
         expressionLabel.minimumScaleFactor = 0.2
-        }
-    
-    func setOperation(_ operation: Operation) {
-        firstTitle = currentTitle
-        currentOperation = operation
-        isTypingNumber = false
+        
+        updateUI()
     }
     
-    func stringForCalculation(_ str: String) -> String {
-        return str.replacingOccurrences(of: ",", with: ".")
-    }
-    
-    func calculate() {
-        let firstValueStr = stringForCalculation(firstTitle)
-        let secondValueStr = stringForCalculation(currentTitle)
-        if let firstValue = Double(firstValueStr),
-           let secondValue = Double(secondValueStr),
-           let operation = currentOperation {
-            
-            var result: Double = 0
-            
-            switch operation {
-            case .add:
-                result = firstValue + secondValue
-            case .subtract:
-                result = firstValue - secondValue
-            case .multiply:
-                result = firstValue * secondValue
-            case .divide:
-                guard secondValue != 0 else {
-                    displayLabel.text = "Error: Division by zero"
-                    currentTitle = "0"
-                    currentOperation = nil
-                    isTypingNumber = false
-                    return
-                }
-                result = firstValue / secondValue
-            }
-            let formatted = formattedValue(result)
-            currentTitle = formatted
-            displayLabel.text = formatted
-            currentOperation = nil
-            isTypingNumber = false
-        }
-    }
-
     @IBAction func actionButton(_ sender: UIButton) {
-        
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        haptic.impactOccurred()
-        
         guard let title = sender.currentTitle else { return }
         
-        if "0"..."9" ~= title {
-            let digits = currentTitle.replacingOccurrences(of: ",", with: "").count
-            if digits < 15 {
-                if wasJustCalculated {
-                    currentTitle = title
-                    expression = title
-                    wasJustCalculated = false
-                    isTypingNumber = true
-                } else if isTypingNumber {
-                    currentTitle += title
-                    expression += title
-                } else {
-                    currentTitle = title
-                    expression += title
-                    isTypingNumber = true
-                }
-                displayLabel.text = currentTitle
-                expressionLabel.text = expression
-            }
-                return
-        }
         switch title {
-        case "+", "–", "×", "÷":
-            if wasJustCalculated {
-                expression = currentTitle
-                wasJustCalculated = false
-            }
-            setOperation(title == "+" ? .add :
-                            title == "–" ? .subtract :
-                            title == "×" ? .multiply : .divide)
-            if let last = expression.last, "+–×÷".contains(last) {
-                expression.removeLast()
-            }
-            expression += title
-            expressionLabel.text = expression
+        case "0"..."9":
+            brain.inputDigit(title)
+        case ",":
+            brain.inputDecimal()
+        case "+":
+            brain.setOperation(.add)
+        case "-":
+            brain.setOperation(.sub)
+        case "×":
+            brain.setOperation(.mul)
+        case "÷":
+            brain.setOperation(.div)
         case "=":
-            if let last = expression.last, "+–×÷".contains(last) {
-                expression += currentTitle
-            }
-            calculate()
-            expressionLabel.text = expression
-            wasJustCalculated = true
-        case "C":
-            if wasJustCalculated {
-                currentTitle = "0"
-                expression = ""
-                isTypingNumber = false
-                wasJustCalculated = false
-            } else if currentTitle.count > 1 {
-                currentTitle.removeLast()
-                if !expression.isEmpty {
-                    expression.removeLast()
-                }
-            } else {
-                if !expression.isEmpty {
-                    expression.removeLast()
-                }
-                currentTitle = "0"
-                isTypingNumber = false
-            }
-            displayLabel.text = currentTitle
-            expressionLabel.text = expression
-        case "AC":
-            currentTitle = "0"
-            firstTitle = ""
-            currentOperation = nil
-            isTypingNumber = false
-            expression = ""
-            displayLabel.text = currentTitle
-            expressionLabel.text = expression
-            wasJustCalculated = false
+            brain.calculate()
         case "%":
-            let valueStr = stringForCalculation(currentTitle)
-            if let value = Double(valueStr) {
-                let percentage = value / 100
-                let formatted = formattedValue(percentage)
-                currentTitle = formatted
-                displayLabel.text = formatted
-                isTypingNumber = false
-            }
+            brain.percent()
         case "±":
-            let valueStr = stringForCalculation(currentTitle)
-            if let value = Double(valueStr) {
-                let toggled = -value
-                let formatted = formattedValue(toggled)
-                currentTitle = formatted
-                displayLabel.text = formatted
-                isTypingNumber = true
-            }
-        case ",", ".":
-            if !currentTitle.contains(",") {
-                if !isTypingNumber || currentTitle == "0" {
-                    currentTitle = "0,"
-                    expression += "0,"
-                    isTypingNumber = true
-                } else {
-                    currentTitle += ","
-                    expression += ","
-                }
-                displayLabel.text = currentTitle
-                expressionLabel.text = expression
-            }
+            brain.toggleSign()
+        case "C":
+            brain.clearEntry()
+        case "AC":
+            brain.clearAll()
         default:
             break
         }
+        updateUI()
+    }
+    
+    private func updateUI() {
+        displayLabel.text = brain.display
+        expressionLabel.text = brain.expression
     }
 }
