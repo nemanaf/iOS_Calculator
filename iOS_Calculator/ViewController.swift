@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var firstTitle: String = ""
     var currentOperation: Operation? = nil
     var isTypingNumber: Bool = false
-    var history: [String] = []
+    var expression: String = ""
     
     enum Operation {
         case add
@@ -101,34 +101,49 @@ class ViewController: UIViewController {
         if "0"..."9" ~= title {
             if isTypingNumber {
                 currentTitle += title
+                expression += title
             } else {
                 currentTitle = title
+                expression += title
                 isTypingNumber = true
             }
             displayLabel.text = currentTitle
+            expressionLabel.text = expression
             return
         }
         
         switch title {
-        case "+": setOperation(.add)
-        case "-": setOperation(.subtract)
-        case "×": setOperation(.multiply)
-        case "÷": setOperation(.divide)
-        case "=": calculate()
+        case "+", "–", "×", "÷":
+            setOperation(title == "+" ? .add :
+                            title == "–" ? .subtract :
+                            title == "×" ? .multiply : .divide)
+            if let last = expression.last, "+–×÷".contains(last) {
+                expression.removeLast()
+            }
+            expression += title
+            expressionLabel.text = expression
+        case "=":
+            calculate()
+            expressionLabel.text = "\(expression) = \(displayLabel.text ?? "")"
+            expression = ""
         case "C":
             if currentTitle.count > 1 {
                 currentTitle.removeLast()
+                if !expression.isEmpty { expression.removeLast() }
             } else {
                 currentTitle = "0"
                 isTypingNumber = false
             }
             displayLabel.text = currentTitle
+            expressionLabel.text = expression
         case "AC":
             currentTitle = "0"
             firstTitle = ""
             currentOperation = nil
             isTypingNumber = false
+            expression = ""
             displayLabel.text = currentTitle
+            expressionLabel.text = expression
         case "%":
             let valueStr = stringForCalculation(currentTitle)
             if let value = Double(valueStr) {
@@ -151,11 +166,14 @@ class ViewController: UIViewController {
             if !currentTitle.contains(",") {
                 if !isTypingNumber || currentTitle == "0" {
                     currentTitle = "0,"
+                    expression += "0,"
                     isTypingNumber = true
                 } else {
                     currentTitle += ","
+                    expression += ","
                 }
                 displayLabel.text = currentTitle
+                expressionLabel.text = expression
             }
         default:
             break
