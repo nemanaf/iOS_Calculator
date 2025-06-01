@@ -25,13 +25,48 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         displayLabel.text = "0"
+        }
+    
+    func setOperation(_ operation: Operation) {
+        firstTitle = currentTitle
+        currentOperation = operation
+        isTypingNumber = false
+    }
+    
+    func calculate() {
+        if let firstValue = Double(firstTitle),
+           let secondValue = Double(currentTitle),
+           let operation = currentOperation {
+            
+            var result: Double = 0
+            
+            switch operation {
+            case .add:
+                result = firstValue + secondValue
+            case .subtract:
+                result = firstValue - secondValue
+            case .multiply:
+                result = firstValue * secondValue
+            case .divide:
+                guard secondValue != 0 else {
+                    displayLabel.text = "Error: Division by zero"
+                    currentTitle = "0"
+                    currentOperation = nil
+                    isTypingNumber = false
+                    return
+                }
+                result = firstValue / secondValue
+            }
+            displayLabel.text = String(result)
+            currentTitle = String(result)
+            currentOperation = nil
+            isTypingNumber = false
+        }
     }
 
     @IBAction func actionButton(_ sender: UIButton) {
         guard let title = sender.currentTitle else { return }
-            print("Button pressed: \(title)")
         
         if "0"..."9" ~= title {
             if isTypingNumber {
@@ -45,52 +80,11 @@ class ViewController: UIViewController {
         }
         
         switch title {
-        case "+":
-            firstTitle = currentTitle
-            currentOperation = .add
-            isTypingNumber = false
-        case "-":
-            firstTitle = currentTitle
-            currentOperation = .subtract
-            isTypingNumber = false
-        case "×":
-            firstTitle = currentTitle
-            currentOperation = .multiply
-            isTypingNumber = false
-        case "÷":
-            firstTitle = currentTitle
-            currentOperation = .divide
-            isTypingNumber = false
-        case "=":
-            if let firstValue = Double(firstTitle),
-               let secondValue = Double(currentTitle),
-               let operation = currentOperation {
-                
-                var result: Double = 0
-                
-                switch operation {
-                case .add:
-                    result = firstValue + secondValue
-                case .subtract:
-                    result = firstValue - secondValue
-                case .multiply:
-                    result = firstValue * secondValue
-                case .divide:
-                    if secondValue == 0 {
-                        displayLabel.text = "Error"
-                        currentTitle = "0"
-                        currentOperation = nil
-                        isTypingNumber = false
-                        return
-                    } else {
-                        result = firstValue / secondValue
-                    }
-                }
-                displayLabel.text = String(result)
-                currentTitle = String(result)
-                currentOperation = nil
-                isTypingNumber = false
-            }
+        case "+": setOperation(.add)
+        case "-": setOperation(.subtract)
+        case "×": setOperation(.multiply)
+        case "÷": setOperation(.divide)
+        case "=": calculate()
         default:
             break
         }
