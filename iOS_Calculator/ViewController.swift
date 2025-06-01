@@ -45,6 +45,9 @@ class ViewController: UIViewController {
         
         displayLabel.adjustsFontSizeToFitWidth = true
         displayLabel.minimumScaleFactor = 0.3
+        
+        expressionLabel.adjustsFontSizeToFitWidth = true
+        expressionLabel.minimumScaleFactor = 0.5
         }
     
     func setOperation(_ operation: Operation) {

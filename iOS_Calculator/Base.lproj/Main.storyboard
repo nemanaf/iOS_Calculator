@@ -643,24 +643,32 @@
                                 <rect key="frame" x="24" y="118" width="345" height="202"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
-                                        <rect key="frame" x="8" y="98.333333333333343" width="329" height="95.666666666666657"/>
+                                        <rect key="frame" x="8" y="114" width="329" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="MIi-DA-IhY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
                                         <color key="textColor" name="blackColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjl-Ta-9he">
-                                        <rect key="frame" x="295" y="91" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjl-Ta-9he">
+                                        <rect key="frame" x="8" y="86" width="329" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="lO5-aI-eKd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" name="expressionLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="8" id="2dn-9v-sqY"/>
+                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="top" secondItem="bjl-Ta-9he" secondAttribute="bottom" constant="8" id="HVU-Iy-yod"/>
                                     <constraint firstItem="wJf-VZ-gOb" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="I7J-og-Bem"/>
                                     <constraint firstAttribute="bottom" secondItem="wJf-VZ-gOb" secondAttribute="bottom" constant="8" id="UAX-0C-aZt"/>
+                                    <constraint firstItem="bjl-Ta-9he" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="eYQ-fd-1JU"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjl-Ta-9he" secondAttribute="trailing" constant="8" id="pMc-X2-Xbg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -718,6 +726,9 @@
         </namedColor>
         <namedColor name="buttonsColorTwo">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="expressionLabel">
+            <color red="0.43137254901960786" green="0.43137254901960786" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
