@@ -106,6 +106,12 @@ class ViewController: UIViewController {
                 displayLabel.text = currentTitle
                 isTypingNumber = false
             }
+        case "±":
+            if let value = Double(currentTitle) {
+                currentTitle = String(-value)
+                displayLabel.text = currentTitle
+                isTypingNumber = true
+            }
         default:
             break
         }
