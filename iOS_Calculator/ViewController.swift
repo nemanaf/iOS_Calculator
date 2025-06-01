@@ -89,6 +89,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionButton(_ sender: UIButton) {
+        
+        let haptic = UIImpactFeedbackGenerator(style: .light)
+        haptic.impactOccurred()
+        
         guard let title = sender.currentTitle else { return }
         
         if "0"..."9" ~= title {
