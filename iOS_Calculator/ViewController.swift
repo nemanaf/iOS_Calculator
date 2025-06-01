@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         case "±":
             brain.toggleSign()
         case "C":
-            brain.clearEntry()
+            brain.backspace()
         case "AC":
             brain.clearAll()
         default:

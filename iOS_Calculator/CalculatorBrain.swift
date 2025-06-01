@@ -65,9 +65,24 @@ struct CalculatorBrain {
         wasJustCalculated   = true
     }
     
-    mutating func clearEntry() {
-        currentOperand = "0"
-        display = "0"
+    mutating func backspace() {
+        if wasJustCalculated {
+            clearAll()
+            return
+        }
+        
+        if currentOperand.count > 1 {
+            currentOperand.removeLast()
+            if !expression.isEmpty { expression.removeLast() }
+        } else {
+            currentOperand = "0"
+            if !expression.isEmpty { expression.removeLast() }
+            if let last = expression.last, "+-×÷".contains(last) {
+                expression.removeLast()
+                pendingOp = nil
+            }
+        }
+        display = currentOperand
     }
     
     mutating func clearAll() {
