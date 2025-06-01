@@ -26,17 +26,28 @@ struct CalculatorBrain {
     
     mutating func inputDigit(_ d: String) {
         guard "0"..."9" ~= d else { return }
+        
         let digits = currentOperand.replacingOccurrences(of: ",", with: "").count
+        
         guard digits < digitLimit else { return }
         
         if wasJustCalculated { clearExpression() }
-        
         if currentOperand == "0" && !currentOperand.contains(",") {
-            currentOperand = d
+            if d == "0" {
+                return
+            } else {
+                currentOperand = d
+                if expression.isEmpty || "+-×÷".contains(expression.last!) {
+                    expression += d
+                } else {
+                    expression.removeLast()
+                    expression += d
+                }
+            }
         } else {
             currentOperand += d
+            expression     += d
         }
-        expression += d
         display = currentOperand
     }
     
