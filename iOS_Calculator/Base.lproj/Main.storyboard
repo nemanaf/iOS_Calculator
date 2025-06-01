@@ -18,7 +18,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
                                 <rect key="frame" x="24" y="208.33333333333334" width="345" height="95.666666666666657"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
