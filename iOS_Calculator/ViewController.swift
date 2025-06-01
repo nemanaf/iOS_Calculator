@@ -93,6 +93,12 @@ class ViewController: UIViewController {
                 isTypingNumber = false
             }
             displayLabel.text = currentTitle
+        case "AC":
+            currentTitle = "0"
+            firstTitle = ""
+            currentOperation = nil
+            isTypingNumber = false
+            displayLabel.text = currentTitle
         default:
             break
         }
