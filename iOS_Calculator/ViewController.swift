@@ -99,6 +99,13 @@ class ViewController: UIViewController {
             currentOperation = nil
             isTypingNumber = false
             displayLabel.text = currentTitle
+        case "%":
+            if let value = Double(currentTitle) {
+                let percentage = value / 100
+                currentTitle = String(percentage)
+                displayLabel.text = currentTitle
+                isTypingNumber = false
+            }
         default:
             break
         }
