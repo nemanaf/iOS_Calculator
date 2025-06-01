@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionButton(_ sender: UIButton) {
-
+        guard let title = sender.currentTitle else { return }
+            print("Button pressed: \(title)")
     }
 }
 

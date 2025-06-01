@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
-                                <rect key="frame" x="16" y="488.33333333333326" width="361" height="60"/>
+                                <rect key="frame" x="16" y="510" width="361" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9c4-0S-TRi"/>
                                 </constraints>
@@ -26,39 +26,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F07-Ga-ldh">
-                                <rect key="frame" x="16" y="564.33333333333337" width="361" height="203.66666666666663"/>
+                                <rect key="frame" x="16" y="586" width="361" height="182"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ftG-Q5-KYO">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-l3-Mlv">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="C"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="C"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OW2-fR-jtd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dm-EI-uyw">
-                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="%"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7NU-35-T7B"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-eA-vz0">
-                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="±"/>
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="±"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWE-h8-gTC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r1-wl-9gp">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="÷"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sil-Tf-AFo"/>
                                                 </connections>
@@ -66,36 +66,36 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jbx-cf-ARB">
-                                        <rect key="frame" x="0.0" y="42.333333333333258" width="361" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="38" width="361" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-1r-nRA">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="7"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hV4-P6-Pm5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-7z-96m">
-                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4i-Nz-RtG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5s-bq-uF8">
-                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="9"/>
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCj-br-lF5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-Jd-8js">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="×"/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="×"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOs-ds-rI2"/>
                                                 </connections>
@@ -103,36 +103,36 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3vb-Eg-Nga">
-                                        <rect key="frame" x="0.0" y="84.666666666666629" width="361" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="76" width="361" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8J-cH-buY">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4X4-So-rXi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-XC-YKX">
-                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="5"/>
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOz-fN-Cg7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="169-D1-LOA">
-                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="6"/>
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKX-dL-ePa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPS-3F-hA8">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="–"/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="–"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ge1-sT-fw7"/>
                                                 </connections>
@@ -140,36 +140,36 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-Iy-Lfb">
-                                        <rect key="frame" x="0.0" y="126.99999999999999" width="361" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="114" width="361" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hy-mq-ttV">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxN-2s-rFK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFg-Y4-YWH">
-                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swu-UQ-fPg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfM-pM-Eh6">
-                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktw-lM-W6i"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-vl-noh">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fby-R4-Ci7"/>
                                                 </connections>
@@ -177,36 +177,36 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GRA-Bb-e8I">
-                                        <rect key="frame" x="0.0" y="169.33333333333326" width="361" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="152" width="361" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUh-6b-T6L">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="AC"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAb-vq-kAr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmi-hh-AGx">
-                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="0"/>
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INV-fN-1r1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0T-UE-JUV">
-                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=","/>
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=","/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akx-F4-TF1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13X-2S-dsK">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="="/>
                                                 <connections>
                                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wW0-Ls-nvG"/>
                                                 </connections>
