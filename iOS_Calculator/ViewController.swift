@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         displayLabel.minimumScaleFactor = 0.3
         
         expressionLabel.adjustsFontSizeToFitWidth = true
-        expressionLabel.minimumScaleFactor = 0.5
+        expressionLabel.minimumScaleFactor = 0.2
         }
     
     func setOperation(_ operation: Operation) {
@@ -103,22 +103,24 @@ class ViewController: UIViewController {
         guard let title = sender.currentTitle else { return }
         
         if "0"..."9" ~= title {
-            if wasJustCalculated {
-                currentTitle = title
-                expression = title
-                wasJustCalculated = false
-                isTypingNumber = true
-            } else if isTypingNumber {
-                currentTitle += title
-                expression += title
-            } else {
-                currentTitle = title
-                expression += title
-                isTypingNumber = true
+            if currentTitle.count < 16 {
+                if wasJustCalculated {
+                    currentTitle = title
+                    expression = title
+                    wasJustCalculated = false
+                    isTypingNumber = true
+                } else if isTypingNumber {
+                    currentTitle += title
+                    expression += title
+                } else {
+                    currentTitle = title
+                    expression += title
+                    isTypingNumber = true
+                }
+                displayLabel.text = currentTitle
+                expressionLabel.text = expression
             }
-            displayLabel.text = currentTitle
-            expressionLabel.text = expression
-            return
+                return
         }
         
         switch title {
