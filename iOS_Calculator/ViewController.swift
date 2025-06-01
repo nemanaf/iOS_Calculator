@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var currentOperation: Operation? = nil
     var isTypingNumber: Bool = false
     var expression: String = ""
+    var wasJustCalculated: Bool = false
     
     enum Operation {
         case add
@@ -102,7 +103,12 @@ class ViewController: UIViewController {
         guard let title = sender.currentTitle else { return }
         
         if "0"..."9" ~= title {
-            if isTypingNumber {
+            if wasJustCalculated {
+                currentTitle = title
+                expression = title
+                wasJustCalculated = false
+                isTypingNumber = true
+            } else if isTypingNumber {
                 currentTitle += title
                 expression += title
             } else {
@@ -117,6 +123,10 @@ class ViewController: UIViewController {
         
         switch title {
         case "+", "–", "×", "÷":
+            if wasJustCalculated {
+                expression = currentTitle
+                wasJustCalculated = false
+            }
             setOperation(title == "+" ? .add :
                             title == "–" ? .subtract :
                             title == "×" ? .multiply : .divide)
@@ -128,12 +138,22 @@ class ViewController: UIViewController {
         case "=":
             calculate()
             expressionLabel.text = "\(expression) = \(displayLabel.text ?? "")"
-            expression = ""
+            wasJustCalculated = true
         case "C":
-            if currentTitle.count > 1 {
+            if wasJustCalculated {
+                currentTitle = "0"
+                expression = ""
+                isTypingNumber = false
+                wasJustCalculated = false
+            } else if currentTitle.count > 1 {
                 currentTitle.removeLast()
-                if !expression.isEmpty { expression.removeLast() }
+                if !expression.isEmpty {
+                    expression.removeLast()
+                }
             } else {
+                if !expression.isEmpty {
+                    expression.removeLast()
+                }
                 currentTitle = "0"
                 isTypingNumber = false
             }
@@ -147,6 +167,7 @@ class ViewController: UIViewController {
             expression = ""
             displayLabel.text = currentTitle
             expressionLabel.text = expression
+            wasJustCalculated = false
         case "%":
             let valueStr = stringForCalculation(currentTitle)
             if let value = Double(valueStr) {
