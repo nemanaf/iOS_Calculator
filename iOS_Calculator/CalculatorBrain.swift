@@ -110,12 +110,27 @@ struct CalculatorBrain {
     }
     
     mutating func toggleSign() {
+        let oldLen = currentOperand.count
+
         if currentOperand.hasPrefix("-") {
             currentOperand.removeFirst()
         } else if currentOperand != "0" {
             currentOperand = "-" + currentOperand
         }
         display = currentOperand
+
+        if !expression.isEmpty,
+           let last = expression.last,
+           ("0123456789,").contains(last) {
+            expression.removeLast(oldLen)
+            expression += currentOperand
+        } else if expression.isEmpty {
+            expression = currentOperand
+        }
+        if wasJustCalculated {
+            expression = currentOperand
+            wasJustCalculated = false
+        }
     }
     
     mutating func percent() {

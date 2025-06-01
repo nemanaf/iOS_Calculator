@@ -17,6 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcE-y5-ZQ2">
+                                <rect key="frame" x="24" y="118" width="345" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
+                                        <rect key="frame" x="8" y="114" width="329" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="MIi-DA-IhY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
+                                        <color key="textColor" name="blackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjl-Ta-9he">
+                                        <rect key="frame" x="8" y="86" width="329" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="lO5-aI-eKd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" name="expressionLabel"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="8" id="2dn-9v-sqY"/>
+                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="top" secondItem="bjl-Ta-9he" secondAttribute="bottom" constant="8" id="HVU-Iy-yod"/>
+                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="I7J-og-Bem"/>
+                                    <constraint firstAttribute="bottom" secondItem="wJf-VZ-gOb" secondAttribute="bottom" constant="8" id="UAX-0C-aZt"/>
+                                    <constraint firstItem="bjl-Ta-9he" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="eYQ-fd-1JU"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjl-Ta-9he" secondAttribute="trailing" constant="8" id="pMc-X2-Xbg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                        <color key="value" name="blackColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.089999999999999997"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F07-Ga-ldh">
                                 <rect key="frame" x="24" y="336" width="345" height="432"/>
                                 <subviews>
@@ -639,55 +688,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcE-y5-ZQ2">
-                                <rect key="frame" x="24" y="118" width="345" height="202"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
-                                        <rect key="frame" x="8" y="114" width="329" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="MIi-DA-IhY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
-                                        <color key="textColor" name="blackColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjl-Ta-9he">
-                                        <rect key="frame" x="8" y="86" width="329" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="lO5-aI-eKd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" name="expressionLabel"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="8" id="2dn-9v-sqY"/>
-                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="top" secondItem="bjl-Ta-9he" secondAttribute="bottom" constant="8" id="HVU-Iy-yod"/>
-                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="I7J-og-Bem"/>
-                                    <constraint firstAttribute="bottom" secondItem="wJf-VZ-gOb" secondAttribute="bottom" constant="8" id="UAX-0C-aZt"/>
-                                    <constraint firstItem="bjl-Ta-9he" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="eYQ-fd-1JU"/>
-                                    <constraint firstAttribute="trailing" secondItem="bjl-Ta-9he" secondAttribute="trailing" constant="8" id="pMc-X2-Xbg"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                        <color key="value" name="blackColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                        <real key="value" value="0.089999999999999997"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                        <size key="value" width="0.0" height="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="backgroundColor"/>
