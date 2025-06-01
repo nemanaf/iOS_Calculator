@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var firstTitle: String = ""
     var currentOperation: Operation? = nil
     var isTypingNumber: Bool = false
+    var history: [String] = []
     
     enum Operation {
         case add
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var displayLabel: UILabel!
+    
+    @IBOutlet weak var expressionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
