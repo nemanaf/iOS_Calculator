@@ -114,7 +114,8 @@ class ViewController: UIViewController {
         guard let title = sender.currentTitle else { return }
         
         if "0"..."9" ~= title {
-            if currentTitle.count < 16 {
+            let digits = currentTitle.replacingOccurrences(of: ",", with: "").count
+            if digits < 15 {
                 if wasJustCalculated {
                     currentTitle = title
                     expression = title
@@ -133,7 +134,6 @@ class ViewController: UIViewController {
             }
                 return
         }
-        
         switch title {
         case "+", "–", "×", "÷":
             if wasJustCalculated {
