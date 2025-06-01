@@ -29,7 +29,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="iZl-Vy-jmp"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="C">
                                                     <color key="titleColor" name="blackColor"/>
@@ -61,7 +61,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="zKP-10-nlT"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="%">
                                                     <color key="titleColor" name="blackColor"/>
@@ -93,7 +93,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="PHy-Yd-Bhq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="±">
                                                     <color key="titleColor" name="blackColor"/>
@@ -125,7 +125,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="4Qw-me-HaM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="÷">
                                                     <color key="titleColor" name="whiteColor"/>
@@ -162,7 +162,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="ieD-qr-yZC"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" name="blackColor"/>
@@ -194,7 +194,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="uEK-ev-1Fi"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" name="blackColor"/>
@@ -226,7 +226,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="FXv-30-aZV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" name="blackColor"/>
@@ -258,7 +258,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="tsk-73-NdN"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="×">
                                                     <color key="titleColor" name="whiteColor"/>
@@ -295,7 +295,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="nK8-Ax-N3M"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" name="blackColor"/>
@@ -327,7 +327,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="Rhv-PO-6b4"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" name="blackColor"/>
@@ -359,7 +359,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="8Oh-7Q-tU7"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" name="blackColor"/>
@@ -391,7 +391,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="PWV-dJ-9XU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="–">
                                                     <color key="titleColor" name="whiteColor"/>
@@ -428,7 +428,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="IKD-MN-sjZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" name="blackColor"/>
@@ -460,7 +460,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="F2q-wC-rS6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" name="blackColor"/>
@@ -492,7 +492,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="b7d-pW-5Uw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" name="blackColor"/>
@@ -524,7 +524,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="3Up-dv-dkn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" name="whiteColor"/>
@@ -561,7 +561,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="oTg-xp-mIf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" name="blackColor"/>
@@ -581,7 +581,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="j7Q-6d-i91"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" name="blackColor"/>
@@ -601,7 +601,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="tL2-0t-Qyv"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title=",">
                                                     <color key="titleColor" name="blackColor"/>
@@ -621,7 +621,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="oGR-r0-bS6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="=">
                                                     <color key="titleColor" name="whiteColor"/>

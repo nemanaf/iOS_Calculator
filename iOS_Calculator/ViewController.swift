@@ -150,6 +150,9 @@ class ViewController: UIViewController {
             expression += title
             expressionLabel.text = expression
         case "=":
+            if let last = expression.last, "+–×÷".contains(last) {
+                expression += currentTitle
+            }
             calculate()
             expressionLabel.text = "\(expression) = \(displayLabel.text ?? "")"
             wasJustCalculated = true
