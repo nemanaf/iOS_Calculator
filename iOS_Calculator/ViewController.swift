@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var currentTitle: String = "0"
     var firstTitle: String = ""
     var currentOperation: Operation? = nil
+    var isTypingNumber: Bool = false
     
     enum Operation {
         case add
@@ -33,35 +34,65 @@ class ViewController: UIViewController {
             print("Button pressed: \(title)")
         
         if "0"..."9" ~= title {
-            if currentTitle == "0" {
-                currentTitle = title
-            } else {
+            if isTypingNumber {
                 currentTitle += title
+            } else {
+                currentTitle = title
+                isTypingNumber = true
             }
             displayLabel.text = currentTitle
+            return
         }
         
         switch title {
         case "+":
             firstTitle = currentTitle
             currentOperation = .add
-            currentTitle = "0"
+            isTypingNumber = false
         case "-":
             firstTitle = currentTitle
             currentOperation = .subtract
-            currentTitle = "0"
+            isTypingNumber = false
         case "×":
             firstTitle = currentTitle
             currentOperation = .multiply
-            currentTitle = "0"
+            isTypingNumber = false
         case "÷":
             firstTitle = currentTitle
             currentOperation = .divide
-            currentTitle = "0"
+            isTypingNumber = false
+        case "=":
+            if let firstValue = Double(firstTitle),
+               let secondValue = Double(currentTitle),
+               let operation = currentOperation {
+                
+                var result: Double = 0
+                
+                switch operation {
+                case .add:
+                    result = firstValue + secondValue
+                case .subtract:
+                    result = firstValue - secondValue
+                case .multiply:
+                    result = firstValue * secondValue
+                case .divide:
+                    if secondValue == 0 {
+                        displayLabel.text = "Error"
+                        currentTitle = "0"
+                        currentOperation = nil
+                        isTypingNumber = false
+                        return
+                    } else {
+                        result = firstValue / secondValue
+                    }
+                }
+                displayLabel.text = String(result)
+                currentTitle = String(result)
+                currentOperation = nil
+                isTypingNumber = false
+            }
         default:
             break
         }
-        displayLabel.text = currentTitle
     }
 }
-
