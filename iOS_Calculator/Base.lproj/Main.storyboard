@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
-                                <rect key="frame" x="24" y="208.33333333333334" width="345" height="95.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
-                                <color key="textColor" name="blackColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F07-Ga-ldh">
                                 <rect key="frame" x="24" y="336" width="345" height="432"/>
                                 <subviews>
@@ -452,16 +447,39 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcE-y5-ZQ2">
+                                <rect key="frame" x="24" y="118" width="345" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-VZ-gOb">
+                                        <rect key="frame" x="8" y="98.333333333333343" width="329" height="95.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
+                                        <color key="textColor" name="blackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="8" id="2dn-9v-sqY"/>
+                                    <constraint firstItem="wJf-VZ-gOb" firstAttribute="leading" secondItem="NcE-y5-ZQ2" secondAttribute="leading" constant="8" id="I7J-og-Bem"/>
+                                    <constraint firstAttribute="bottom" secondItem="wJf-VZ-gOb" secondAttribute="bottom" constant="8" id="UAX-0C-aZt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="F07-Ga-ldh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ksd-WX-YkJ"/>
-                            <constraint firstItem="F07-Ga-ldh" firstAttribute="top" secondItem="wJf-VZ-gOb" secondAttribute="bottom" constant="32" id="VEq-jZ-Bby"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F07-Ga-ldh" secondAttribute="trailing" constant="24" id="Wv2-iU-dUb"/>
-                            <constraint firstItem="wJf-VZ-gOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="bC8-w3-iMc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NcE-y5-ZQ2" secondAttribute="trailing" constant="24" id="anf-gY-5M2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F07-Ga-ldh" secondAttribute="bottom" constant="16" id="cAF-QH-yon"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJf-VZ-gOb" secondAttribute="trailing" constant="24" id="zWC-4O-2qe"/>
+                            <constraint firstItem="NcE-y5-ZQ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qYY-Mc-hKO"/>
+                            <constraint firstItem="F07-Ga-ldh" firstAttribute="top" secondItem="NcE-y5-ZQ2" secondAttribute="bottom" constant="16" id="roe-Q2-IU1"/>
+                            <constraint firstItem="NcE-y5-ZQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="vKd-JM-bCQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -492,5 +510,8 @@
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
