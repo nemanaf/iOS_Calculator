@@ -153,7 +153,7 @@ class ViewController: UIViewController {
                 expression += currentTitle
             }
             calculate()
-            expressionLabel.text = "\(expression) = \(displayLabel.text ?? "")"
+            expressionLabel.text = expression
             wasJustCalculated = true
         case "C":
             if wasJustCalculated {
