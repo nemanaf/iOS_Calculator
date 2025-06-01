@@ -39,7 +39,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayLabel.text = "0"
+        
+        displayLabel.adjustsFontSizeToFitWidth = true
+        displayLabel.minimumScaleFactor = 0.3
         }
     
     func setOperation(_ operation: Operation) {
