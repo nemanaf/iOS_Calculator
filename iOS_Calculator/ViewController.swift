@@ -23,29 +23,31 @@ class ViewController: UIViewController {
         case divide
     }
     
+    private func makeFormatter(style: NumberFormatter.Style, maxFrac: Int = 10, scientific: Bool = false) -> NumberFormatter {
+        
+        let f = NumberFormatter()
+        f.numberStyle = style
+        f.minimumFractionDigits = 0
+        f.maximumFractionDigits = maxFrac
+        f.decimalSeparator = ","
+        f.usesGroupingSeparator = false
+        if scientific {
+            f.exponentSymbol = "e"
+        }
+        return f
+    }
+    
     func formattedValue(_ value: Double) -> String {
         
         let absValue = abs(value)
-        if absValue >= 1e15 || (absValue != 0 && absValue < 1e-15) {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .scientific
-            formatter.maximumFractionDigits = 6
-            formatter.exponentSymbol = "e"
-            formatter.decimalSeparator = ","
-            return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
-        }
         
+        if absValue >= 1e15 || (absValue != 0 && absValue < 1e-15) {
+            return makeFormatter(style: .scientific, maxFrac: 6, scientific: true).string(from: NSNumber(value: value)) ?? "\(value)"
+        }
         if value.truncatingRemainder(dividingBy: 1) == 0 {
             return String(Int(value))
-        } else {
-            let formatter = NumberFormatter()
-            formatter.minimumFractionDigits = 0
-            formatter.maximumFractionDigits = 10
-            formatter.numberStyle = .decimal
-            formatter.decimalSeparator = ","
-            formatter.usesGroupingSeparator = false
-            return formatter.string(from: NSNumber(value: value)) ?? String(value)
         }
+        return makeFormatter(style: .decimal).string(from: NSNumber(value: value)) ?? "\(value)"
     }
 
     @IBOutlet weak var displayLabel: UILabel!
