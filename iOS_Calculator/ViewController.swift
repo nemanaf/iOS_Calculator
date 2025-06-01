@@ -24,6 +24,18 @@ class ViewController: UIViewController {
     }
     
     func formattedValue(_ value: Double) -> String {
+        
+        let absValue = abs(value)
+        if absValue >= 1e16 || (absValue != 0 && absValue < 1e-6) {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .scientific
+            formatter.maximumFractionDigits = 6
+            formatter.exponentSymbol = "e"
+            formatter.decimalSeparator = ","
+            return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
+            
+        }
+        
         if value.truncatingRemainder(dividingBy: 1) == 0 {
             return String(Int(value))
         } else {
