@@ -112,14 +112,28 @@ struct CalculatorBrain {
     }
     
     mutating func inputDecimal() {
-        if wasJustCalculated { clearExpression() }
-        if !currentOperand.contains(",") {
-            currentOperand += currentOperand == "0" ? "0," : ","
-            expression += currentOperand == ",0" ? "0," : ","
-            display = currentOperand
+        if wasJustCalculated {
+            clearExpression()
         }
+        if currentOperand.contains(",") {
+            return
+        }
+        if currentOperand.isEmpty || currentOperand == "0" {
+            currentOperand = "0,"
+            if expression.isEmpty || "+-×÷".contains(expression.last!) {
+                expression += "0,"
+            } else {
+                expression += ","
+            }
+        } else {
+            if let last = expression.last, "+-×÷,".contains(last) {
+                return
+            }
+            currentOperand += ","
+            expression += ","
+        }
+        display = currentOperand
     }
-    
     mutating func toggleSign() {
         let oldLen = currentOperand.count
 
