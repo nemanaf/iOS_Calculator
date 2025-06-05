@@ -52,28 +52,23 @@ struct CalculatorBrain {
     }
     
     mutating func calculate() {
-        guard let op = pendingOp,
-              let first  = Double(formatForCalc(firstOperand)),
-              let second = Double(formatForCalc(currentOperand))
-        else { return }
+        let mathExpression = expression
+            .replacingOccurrences(of: "×", with: "*")
+            .replacingOccurrences(of: "÷", with: "/")
+            .replacingOccurrences(of: ",", with: ".")
 
-        if let last = expression.last, "+-×÷".contains(last) {
-            expression += currentOperand
-        }
+        let expr = NSExpression(format: mathExpression)
 
-        var result: Double = 0
-        switch op {
-        case .add: result = first + second
-        case .sub: result = first - second
-        case .mul: result = first * second
-        case .div:
-            guard second != 0 else { display = "Error"; return }
-            result = first / second
+        if let result = expr.expressionValue(with: nil, context: nil) as? NSNumber {
+            let value = result.doubleValue
+            currentOperand = formattedValue(value)
+            display = currentOperand
+            expression = formattedValue(value)
+            pendingOp = nil
+            wasJustCalculated = true
+        } else {
+            display = "Error"
         }
-        currentOperand      = formattedValue(result)
-        display             = currentOperand
-        pendingOp           = nil
-        wasJustCalculated   = true
     }
     
     mutating func backspace() {
